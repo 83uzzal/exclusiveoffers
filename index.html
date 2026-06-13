@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rewards Hub Pro | Premium Offers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: sans-serif; background-color: #f8fafc; }
+        .card { transition: transform 0.2s; }
+        .card:hover { transform: translateY(-5px); }
+    </style>
+</head>
+<body class="pb-20">
+
+<header class="bg-white shadow-sm sticky top-0 z-50">
+    <nav class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+        <h1 class="text-xl font-extrabold text-indigo-600">RewardsHub Pro</h1>
+        <div class="hidden md:flex space-x-6 text-sm font-semibold text-slate-600">
+            <a href="#home" class="hover:text-indigo-600">Home</a>
+            <a href="#offers" class="hover:text-indigo-600">Offers</a>
+            <a href="#about" class="hover:text-indigo-600">About</a>
+        </div>
+    </nav>
+</header>
+
+<section id="home" class="text-center py-16 px-4">
+    <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Unlock Premium Rewards</h2>
+    <p class="text-slate-600 max-w-lg mx-auto">Explore curated gift cards, cashback offers, and job opportunities.</p>
+</section>
+
+<section class="max-w-6xl mx-auto px-4 mb-8 flex flex-col md:flex-row gap-4">
+    <input id="searchInput" type="text" placeholder="Search rewards..." class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-indigo-400 outline-none">
+    <select id="filter" class="px-4 py-3 rounded-xl border border-slate-200 outline-none">
+        <option value="all">All Categories</option>
+        <option value="Amazon">Amazon</option>
+        <option value="Walmart">Walmart</option>
+        <option value="Cash">Cash App</option>
+        <option value="Job">Jobs</option>
+    </select>
+</section>
+
+<main id="offers" class="max-w-6xl mx-auto px-4">
+    <div id="offerContainer" class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"></div>
+</main>
+
+<section id="about" class="py-16 text-center px-4">
+    <h3 class="text-2xl font-bold mb-4">About Us</h3>
+    <p class="text-slate-500 max-w-md mx-auto">Connecting you to global opportunities and rewards with ease.</p>
+</section>
+
+<footer class="md:hidden fixed bottom-0 w-full bg-white border-t border-slate-200 flex justify-around p-4 z-50">
+    <a href="#home" class="text-xs font-bold text-indigo-600">Home</a>
+    <a href="#offers" class="text-xs font-bold text-slate-500">Offers</a>
+    <a href="#about" class="text-xs font-bold text-slate-500">About</a>
+</footer>
+
+<script>
+    const offers = [
+        {id:6091, name:"Amazon $750", type:"Amazon", link:"https://www.aplfb8trk.com/3LJ2KBKX/CR3HXR4/"},
+        {id:6090, name:"Amazon $1000", type:"Amazon", link:"https://www.aplfb8trk.com/3LJ2KBKX/CR2532H/"},
+        {id:6089, name:"Walmart $750", type:"Walmart", link:"https://www.aplfb8trk.com/3LJ2KBKX/CQZQ69W/"},
+        {id:6088, name:"Walmart $1000", type:"Walmart", link:"https://www.aplfb8trk.com/3LJ2KBKX/CQXC9K9/"},
+        {id:6087, name:"Cash App $750", type:"Cash", link:"https://www.aplfb8trk.com/3LJ2KBKX/CQTZDSN/"},
+        {id:6086, name:"Cash App $1000", type:"Cash", link:"https://www.aplfb8trk.com/3LJ2KBKX/CQSKJ43/"},
+        {id:6073, name:"Coca Cola Jobs", type:"Job", link:"https://www.aplfb8trk.com/3LJ2KBKX/CQ6J2J6/"},
+        {id:6072, name:"Dollar Tree", type:"Job", link:"https://www.aplfb8trk.com/3LJ2KBKX/CQ555RK/"},
+        {id:6071, name:"Kelly Services", type:"Job", link:"https://www.aplfb8trk.com/3LJ2KBKX/CQ3Q92Z/"},
+        {id:5958, name:"Aldi $750", type:"Walmart", link:"https://www.aplfb8trk.com/3LJ2KBKX/CJGSFWC/"},
+        {id:5957, name:"Cash App $750", type:"Cash", link:"https://www.aplfb8trk.com/3LJ2KBKX/CJFFK5Q/"},
+        {id:5956, name:"Walmart $750", type:"Walmart", link:"https://www.aplfb8trk.com/3LJ2KBKX/CJD2NF5/"},
+        {id:5954, name:"TrendnDaily $1000", type:"Cash", link:"https://www.aplfb8trk.com/3LJ2KBKX/CJ98WXX/"},
+        {id:5953, name:"$500 Walmart Gift Card", type:"Walmart", link:"https://www.aplfb8trk.com/3LJ2KBKX/CJ7W27B/"},
+        {id:5952, name:"$750 Cash Pitch", type:"Cash", link:"https://www.aplfb8trk.com/3LJ2KBKX/CJ6H5GP/"},
+        {id:5594, name:"Driver Job", type:"Job", link:"https://www.aplfb8trk.com/3LJ2KBKX/BWFBW1C/"}
+    ];
+
+    const container = document.getElementById("offerContainer");
+    const search = document.getElementById("searchInput");
+    const filter = document.getElementById("filter");
+
+    function render(data) {
+        container.innerHTML = data.map(o => `
+            <div class="card bg-white p-3 rounded-2xl shadow-sm border border-slate-100">
+                <img src="https://picsum.photos/seed/${o.id}/400/200" class="w-full h-24 object-cover rounded-xl mb-3">
+                <h3 class="font-bold text-sm truncate">${o.name}</h3>
+                <p class="text-[10px] text-slate-400 mb-3">ID: ${o.id}</p>
+                <a href="${o.link}" target="_blank" class="block text-center bg-indigo-600 text-white py-2 rounded-lg text-xs font-bold hover:bg-indigo-700">Claim</a>
+            </div>
+        `).join("");
+    }
+
+    search.addEventListener("input", () => {
+        const val = search.value.toLowerCase();
+        const cat = filter.value;
+        render(offers.filter(o => o.name.toLowerCase().includes(val) && (cat === "all" || o.type === cat)));
+    });
+
+    filter.addEventListener("change", () => {
+        const val = search.value.toLowerCase();
+        const cat = filter.value;
+        render(offers.filter(o => o.name.toLowerCase().includes(val) && (cat === "all" || o.type === cat)));
+    });
+
+    render(offers);
+</script>
+</body>
+</html>
