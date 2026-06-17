@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rewards Hub Pro | Premium Offers</title>
+    <title>RewardsHub Pro | Elite Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { font-family: sans-serif; background-color: #f8fafc; }
-        .card { transition: transform 0.2s; }
-        .card:hover { transform: translateY(-5px); }
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: #f8fafc; }
+        .hero-gradient { background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%); }
     </style>
 </head>
-<body class="pb-20">
+<body>
 
-<header class="bg-white shadow-sm sticky top-0 z-50">
-    <nav class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-        <h1 class="text-xl font-extrabold text-indigo-600">RewardsHub Pro</h1>
-        <div class="hidden md:flex space-x-6 text-sm font-semibold text-slate-600">
+<header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200">
+    <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <h1 class="text-2xl font-extrabold text-indigo-700 tracking-tight">RewardsHub Pro</h1>
+        <div class="space-x-8 text-sm font-semibold text-slate-600">
             <a href="#home" class="hover:text-indigo-600">Home</a>
             <a href="#offers" class="hover:text-indigo-600">Offers</a>
             <a href="#about" class="hover:text-indigo-600">About</a>
@@ -24,84 +24,140 @@
     </nav>
 </header>
 
-<section id="home" class="text-center py-16 px-4">
-    <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Unlock Premium Rewards</h2>
-    <p class="text-slate-600 max-w-lg mx-auto">Explore curated gift cards, cashback offers, and job opportunities.</p>
+<section id="home" class="hero-gradient text-white py-20 px-6 rounded-b-[3rem] text-center">
+    <h2 class="text-5xl font-extrabold mb-6">Unlock Premium Rewards & Opportunities</h2>
+    <p class="text-indigo-100 text-lg max-w-xl mx-auto mb-10">Explore curated gift cards, cashback offers, and opportunities from top brands worldwide.</p>
+    <a href="#offers" class="bg-white text-indigo-700 px-10 py-4 rounded-full font-bold shadow-xl hover:bg-slate-100 transition">Browse Offers</a>
 </section>
 
-<section class="max-w-6xl mx-auto px-4 mb-8 flex flex-col md:flex-row gap-4">
-    <input id="searchInput" type="text" placeholder="Search rewards..." class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-indigo-400 outline-none">
-    <select id="filter" class="px-4 py-3 rounded-xl border border-slate-200 outline-none">
-        <option value="all">All Categories</option>
-        <option value="Amazon">Amazon</option>
-        <option value="Walmart">Walmart</option>
-        <option value="Cash">Cash App</option>
-        <option value="Job">Jobs</option>
-    </select>
+<section class="max-w-6xl mx-auto px-6 -mt-10">
+    <div class="bg-white p-6 rounded-3xl shadow-xl shadow-indigo-100 flex flex-col md:flex-row gap-4">
+        <input id="searchInput" type="text" placeholder="Search rewards by name or ID..." class="flex-1 px-6 py-4 rounded-2xl bg-slate-50 border border-slate-200 outline-none focus:ring-2 focus:ring-indigo-500">
+        <select id="filter" class="px-6 py-4 rounded-2xl bg-slate-50 border border-slate-200 outline-none cursor-pointer">
+            <option value="all">All Categories</option>
+            <option value="Amazon">Amazon</option>
+            <option value="Walmart">Walmart</option>
+            <option value="Cash">Cash App / Zelle</option>
+            <option value="Other">Other Rewards</option>
+        </select>
+    </div>
 </section>
 
-<main id="offers" class="max-w-6xl mx-auto px-4">
-    <div id="offerContainer" class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"></div>
+<main id="offers" class="max-w-6xl mx-auto px-6 py-16">
+    <div id="offerContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"></div>
 </main>
 
-<section id="about" class="py-16 text-center px-4">
-    <h3 class="text-2xl font-bold mb-4">About Us</h3>
-    <p class="text-slate-500 max-w-md mx-auto">Connecting you to global opportunities and rewards with ease.</p>
-</section>
-
-<footer class="md:hidden fixed bottom-0 w-full bg-white border-t border-slate-200 flex justify-around p-4 z-50">
-    <a href="#home" class="text-xs font-bold text-indigo-600">Home</a>
-    <a href="#offers" class="text-xs font-bold text-slate-500">Offers</a>
-    <a href="#about" class="text-xs font-bold text-slate-500">About</a>
+<footer class="py-12 text-center border-t border-slate-200 bg-white">
+    <p class="text-slate-500 font-semibold mb-2">© 2026 RewardsHub Pro. All rights reserved.</p>
+    <div class="flex justify-center gap-6 text-sm text-slate-400">
+        <a href="#home" class="hover:text-indigo-600">Home</a> 
+        <a href="#offers" class="hover:text-indigo-600">Offers</a> 
+        <a href="#about" class="hover:text-indigo-600">About</a>
+    </div>
 </footer>
 
 <script>
+    // 100% updated list with your requested 15 offers and links
     const offers = [
-        {id:6091, name:"Amazon $750", type:"Amazon", link:"https://www.aplfb8trk.com/3LJ2KBKX/CR3HXR4/"},
-        {id:6090, name:"Amazon $1000", type:"Amazon", link:"https://www.aplfb8trk.com/3LJ2KBKX/CR2532H/"},
-        {id:6089, name:"Walmart $750", type:"Walmart", link:"https://www.aplfb8trk.com/3LJ2KBKX/CQZQ69W/"},
-        {id:6088, name:"Walmart $1000", type:"Walmart", link:"https://www.aplfb8trk.com/3LJ2KBKX/CQXC9K9/"},
-        {id:6087, name:"Cash App $750", type:"Cash", link:"https://www.aplfb8trk.com/3LJ2KBKX/CQTZDSN/"},
-        {id:6086, name:"Cash App $1000", type:"Cash", link:"https://www.aplfb8trk.com/3LJ2KBKX/CQSKJ43/"},
-        {id:6073, name:"Coca Cola Jobs", type:"Job", link:"https://www.aplfb8trk.com/3LJ2KBKX/CQ6J2J6/"},
-        {id:6072, name:"Dollar Tree", type:"Job", link:"https://www.aplfb8trk.com/3LJ2KBKX/CQ555RK/"},
-        {id:6071, name:"Kelly Services", type:"Job", link:"https://www.aplfb8trk.com/3LJ2KBKX/CQ3Q92Z/"},
-        {id:5958, name:"Aldi $750", type:"Walmart", link:"https://www.aplfb8trk.com/3LJ2KBKX/CJGSFWC/"},
-        {id:5957, name:"Cash App $750", type:"Cash", link:"https://www.aplfb8trk.com/3LJ2KBKX/CJFFK5Q/"},
-        {id:5956, name:"Walmart $750", type:"Walmart", link:"https://www.aplfb8trk.com/3LJ2KBKX/CJD2NF5/"},
-        {id:5954, name:"TrendnDaily $1000", type:"Cash", link:"https://www.aplfb8trk.com/3LJ2KBKX/CJ98WXX/"},
-        {id:5953, name:"$500 Walmart Gift Card", type:"Walmart", link:"https://www.aplfb8trk.com/3LJ2KBKX/CJ7W27B/"},
-        {id:5952, name:"$750 Cash Pitch", type:"Cash", link:"https://www.aplfb8trk.com/3LJ2KBKX/CJ6H5GP/"},
-        {id:5594, name:"Driver Job", type:"Job", link:"https://www.aplfb8trk.com/3LJ2KBKX/BWFBW1C/"}
+        {id: 4385, name: "Rewards US - Cash $750 - (US)", type: "Cash", link: "https://www.af9m8trk.com/BL6116FS/W8F12MFY/"},
+        {id: 18603, name: "Rewards US - Amazon $750", type: "Amazon", link: "https://www.af9m8trk.com/BL6116FS/54612BXY/"},
+        {id: 18651, name: "Rewards UK - Shein £750 Shopping", type: "Other", link: "https://www.af9m8trk.com/BL6116FS/16F12BVJ/"},
+        {id: 18652, name: "iPhone 15 Pro Max Bonus $750", type: "Other", link: "https://www.af9m8trk.com/BL6116FS/JFD12BVR/"},
+        {id: 18653, name: "Amazon Bonus $750", type: "Amazon", link: "https://www.af9m8trk.com/BL6116FS/MGH12BVQ/"},
+        {id: 24913, name: "OkWow - CashApp $850", type: "Cash", link: "https://www.af9m8trk.com/BL6116FS/5JY122KX/"},
+        {id: 24918, name: "OkWow - Food $200", type: "Other", link: "https://www.af9m8trk.com/BL6116FS/SUM122L1/"},
+        {id: 24951, name: "OkWow - Netflix $100", type: "Other", link: "https://www.af9m8trk.com/BL6116FS/KDQ122LY/"},
+        {id: 25582, name: "OkWow - Walmart $1,000", type: "Walmart", link: "https://www.af9m8trk.com/BL6116FS/T6M12294/"},
+        {id: 25741, name: "American Prizes Amazon $1,000", type: "Amazon", link: "https://www.af9m8trk.com/BL6116FS/TJ2123FW/"},
+        {id: 27279, name: "UpLevelRewards - Zelle $750", type: "Cash", link: "https://www.af9m8trk.com/BL6116FS/8LP123XC/"},
+        {id: 27280, name: "UpLevelRewards - $1000 Cash Deposit", type: "Cash", link: "https://www.af9m8trk.com/BL6116FS/4K1123XK/"},
+        {id: 27281, name: "UpLevelRewards - Target $750", type: "Other", link: "https://www.af9m8trk.com/BL6116FS/HMG123XJ/"},
+        {id: 27282, name: "UpLevelRewards - McDonald's $100", type: "Other", link: "https://www.af9m8trk.com/BL6116FS/UPW123XH/"},
+        {id: 27283, name: "UpLevelRewards - Costco $750", type: "Other", link: "https://www.af9m8trk.com/BL6116FS/NB9123XG/"}
     ];
+
+    // High speed optimized brand layout imagery map
+    const imageMap = {
+        amazon: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=400&q=75&auto=format&fit=crop", 
+        walmart: "https://images.unsplash.com/photo-1601599561264-731ede97f1c9?w=400&q=75&auto=format&fit=crop", 
+        cash: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=400&q=75&auto=format&fit=crop", 
+        cashapp: "https://images.unsplash.com/photo-1563013544-824ae1d704d3?w=400&q=75&auto=format&fit=crop", 
+        zelle: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=400&q=75&auto=format&fit=crop", 
+        iphone: "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=400&q=75&auto=format&fit=crop", 
+        shein: "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=400&q=75&auto=format&fit=crop", 
+        netflix: "https://images.unsplash.com/photo-1574375927938-d5a98e8edd86?w=400&q=75&auto=format&fit=crop", 
+        mcdonald: "https://images.unsplash.com/photo-1569254994521-dd45f6a6a1aa?w=400&q=75&auto=format&fit=crop", 
+        food: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=75&auto=format&fit=crop", 
+        target: "https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?w=400&q=75&auto=format&fit=crop", 
+        costco: "https://images.unsplash.com/photo-1578916171728-46686eac8d58?w=400&q=75&auto=format&fit=crop", 
+        default: "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=400&q=75&auto=format&fit=crop" 
+    };
+
+    function getRelevantImage(name) {
+        const lowerName = name.toLowerCase();
+        if (lowerName.includes("amazon")) return imageMap.amazon;
+        if (lowerName.includes("walmart")) return imageMap.walmart;
+        if (lowerName.includes("cashapp") || lowerName.includes("cash app")) return imageMap.cashapp;
+        if (lowerName.includes("zelle")) return imageMap.zelle;
+        if (lowerName.includes("cash")) return imageMap.cash;
+        if (lowerName.includes("iphone")) return imageMap.iphone;
+        if (lowerName.includes("shein")) return imageMap.shein;
+        if (lowerName.includes("netflix")) return imageMap.netflix;
+        if (lowerName.includes("mcdonald")) return imageMap.mcdonald;
+        if (lowerName.includes("food")) return imageMap.food;
+        if (lowerName.includes("target")) return imageMap.target;
+        if (lowerName.includes("costco")) return imageMap.costco;
+        return imageMap.default;
+    }
 
     const container = document.getElementById("offerContainer");
     const search = document.getElementById("searchInput");
     const filter = document.getElementById("filter");
 
     function render(data) {
-        container.innerHTML = data.map(o => `
-            <div class="card bg-white p-3 rounded-2xl shadow-sm border border-slate-100">
-                <img src="https://picsum.photos/seed/${o.id}/400/200" class="w-full h-24 object-cover rounded-xl mb-3">
-                <h3 class="font-bold text-sm truncate">${o.name}</h3>
-                <p class="text-[10px] text-slate-400 mb-3">ID: ${o.id}</p>
-                <a href="${o.link}" target="_blank" class="block text-center bg-indigo-600 text-white py-2 rounded-lg text-xs font-bold hover:bg-indigo-700">Claim</a>
-            </div>
-        `).join("");
+        if(data.length === 0) {
+            container.innerHTML = `<p class="col-span-full text-center text-slate-400 py-12 font-medium">No rewards matched your search criteria.</p>`;
+            return;
+        }
+
+        container.innerHTML = data.map(o => {
+            const img = getRelevantImage(o.name);
+            return `
+                <div class="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-full h-36 overflow-hidden rounded-2xl mb-4 bg-slate-50">
+                            <img src="${img}" 
+                                 class="w-full h-full object-cover transition duration-500 hover:scale-105" 
+                                 alt="${o.name}"
+                                 onerror="this.onerror=null; this.src='${imageMap.default}';">
+                        </div>
+                        <span class="text-[10px] font-bold text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full uppercase tracking-widest">${o.type}</span>
+                        <h3 class="font-bold text-base mt-3 mb-1 line-clamp-2 text-slate-800" title="${o.name}">${o.name}</h3>
+                        <p class="text-xs text-slate-400 mb-5">ID: ${o.id}</p>
+                    </div>
+                    <a href="${o.link}" target="_blank" rel="noopener noreferrer" class="block text-center bg-slate-900 text-white py-3 rounded-2xl font-bold hover:bg-indigo-600 transition shadow-sm">Claim Now</a>
+                </div>
+            `;
+        }).join("");
     }
 
-    search.addEventListener("input", () => {
+    function update() {
         const val = search.value.toLowerCase();
         const cat = filter.value;
-        render(offers.filter(o => o.name.toLowerCase().includes(val) && (cat === "all" || o.type === cat)));
-    });
+        
+        const filtered = offers.filter(o => {
+            const matchSearch = o.name.toLowerCase().includes(val) || o.id.toString().includes(val);
+            const matchCat = (cat === "all" || o.type === cat);
+            return matchSearch && matchCat;
+        });
+        
+        render(filtered);
+    }
 
-    filter.addEventListener("change", () => {
-        const val = search.value.toLowerCase();
-        const cat = filter.value;
-        render(offers.filter(o => o.name.toLowerCase().includes(val) && (cat === "all" || o.type === cat)));
-    });
-
+    search.addEventListener("input", update);
+    filter.addEventListener("change", update);
+    
+    // Initial load execution
     render(offers);
 </script>
 </body>
